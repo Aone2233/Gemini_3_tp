@@ -15,7 +15,7 @@ const GestureController: React.FC<GestureControllerProps> = ({ onGestureUpdate }
   const [cameraActive, setCameraActive] = useState(false);
   
   const handLandmarkerRef = useRef<HandLandmarker | null>(null);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number>(0);
   const lastVideoTimeRef = useRef<number>(-1);
 
   // Tracking previous positions for delta calculation

@@ -9,6 +9,17 @@ import Interface from './components/Interface';
 import { GestureState, GestureType } from './types';
 import { MOVEMENT_SENSITIVITY_ROTATE, MOVEMENT_SENSITIVITY_ZOOM } from './constants';
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      color: any;
+      ambientLight: any;
+      pointLight: any;
+      fog: any;
+    }
+  }
+}
+
 // Component to handle camera movement based on gestures
 const CameraController: React.FC<{ gestureState: GestureState }> = ({ gestureState }) => {
   const { camera } = useThree();

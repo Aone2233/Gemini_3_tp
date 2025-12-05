@@ -3,6 +3,21 @@ import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { PARTICLE_COUNT_PLANET, PARTICLE_COUNT_RINGS, PLANET_RADIUS, RING_INNER_RADIUS, RING_OUTER_RADIUS, COLOR_PALETTE } from '../constants';
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      group: any;
+      points: any;
+      bufferGeometry: any;
+      bufferAttribute: any;
+      pointsMaterial: any;
+      mesh: any;
+      sphereGeometry: any;
+      meshBasicMaterial: any;
+    }
+  }
+}
+
 const Saturn: React.FC = () => {
   const planetRef = useRef<THREE.Points>(null);
   const ringsRef = useRef<THREE.Points>(null);
