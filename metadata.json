@@ -1,0 +1,8 @@
+{
+  "name": "Saturn Particle Explorer",
+  "description": "A visually stunning 3D particle rendering of Saturn using React Three Fiber, controlled by hand gestures via MediaPipe, with AI-powered astronomical insights.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
