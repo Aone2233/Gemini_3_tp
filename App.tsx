@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, Suspense } from 'react';
+import React, { useState, useRef, Suspense } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Stars, PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
@@ -9,7 +9,7 @@ import Interface from './components/Interface';
 import { GestureState, GestureType } from './types';
 import { MOVEMENT_SENSITIVITY_ROTATE, MOVEMENT_SENSITIVITY_ZOOM } from './constants';
 
-declare global {
+declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
       color: any;

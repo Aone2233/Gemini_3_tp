@@ -48,8 +48,7 @@ const Saturn: React.FC = () => {
 
       // Color mapping based on latitude (y position) to create bands
       const normalizedY = (y + PLANET_RADIUS) / (PLANET_RADIUS * 2);
-      // Create bands using sine waves
-      const band = Math.sin(normalizedY * 20 + Math.random() * 2) > 0;
+      
       const paletteIndex = Math.floor(normalizedY * COLOR_PALETTE.planet.length) % COLOR_PALETTE.planet.length;
       
       colorObj.set(COLOR_PALETTE.planet[paletteIndex]);

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { FilesetResolver, HandLandmarker } from '@mediapipe/tasks-vision';
 import { VISION_MODEL_ASSET_PATH, WASM_BINARY_PATH, PINCH_THRESHOLD } from '../constants';
 import { GestureState, GestureType } from '../types';
-import { Loader2, Camera, CameraOff } from 'lucide-react';
+import { Loader2, CameraOff } from 'lucide-react';
 
 interface GestureControllerProps {
   onGestureUpdate: (state: GestureState) => void;
